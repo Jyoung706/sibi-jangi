@@ -7,27 +7,10 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-# Zero-Installs (Yarn Berry)
-.yarn/*
-!.yarn/cache
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/sdks
-!.yarn/versions
-
-# Production
-/dist
-/dist-ssr
-/build
-
-# Local env files
+node_modules
+dist
+dist-ssr
 *.local
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
 
 # Editor directories and files
 .vscode/*
@@ -39,6 +22,3 @@ lerna-debug.log*
 *.njsproj
 *.sln
 *.sw?
-
-# Vite
-vite_cache/*

@@ -1,0 +1,19 @@
+{
+  "name": "project-root",
+  "private": true,
+  "scripts": {
+    "dev": "docker compose -f docker-compose.dev.yml up --build -d",
+    "dev:fe": "docker compose -f docker-compose.dev.yml up --build -d frontend",
+    "dev:be": "docker compose -f docker-compose.dev.yml up --build -d backend",
+    "dev:logs": "docker compose -f docker-compose.dev.yml logs -f",
+    "dev:logs:fe": "docker compose -f docker-compose.dev.yml logs -f frontend",
+    "dev:logs:be": "docker compose -f docker-compose.dev.yml logs -f backend",
+    "down": "docker compose -f docker-compose.dev.yml down",
+    "down:volumes": "docker compose -f docker-compose.dev.yml down -v",
+    "restart": "pnpm down && pnpm dev",
+    "clean": "rm -rf **/node_modules && rm -rf **/dist",
+    "ps": "docker compose -f docker-compose.dev.yml ps",
+    "frontend": "docker compose -f docker-compose.dev.yml exec frontend sh",
+    "backend": "docker compose -f docker-compose.dev.yml exec backend sh"
+  }
+}
